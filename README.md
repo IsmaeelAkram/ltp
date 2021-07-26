@@ -14,6 +14,8 @@ The master server has the **correct **time and distributes it on request. A slav
 * MINUTE
 * SECOND
 * MILLISECOND
+
+#### Responses
 * **DATETIME** responds with the date and time. Response:
     ```
     07-26-2021 02:09:33:572
