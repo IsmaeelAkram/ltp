@@ -1,6 +1,6 @@
 package request
 
-type Method int
+type MethodType int
 
 const (
 	REQUEST_INVALID     = 0
@@ -13,7 +13,7 @@ const (
 	REQUEST_MILLISECOND = 7
 )
 
-func GetMethod(x string) int {
+func GetMethodType(x string) MethodType {
 	switch x {
 	case "DATETIME":
 		return REQUEST_DATETIME
