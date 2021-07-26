@@ -1,6 +1,6 @@
 
 # LTP — Local Time Protocol (Port 2)
-Network protocl to request and synchronize time across machines.
+Network protocol to request and synchronize time across machines.
 
 ### Explanation
 
