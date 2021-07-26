@@ -5,6 +5,7 @@ import (
 	"net"
 
 	"github.com/IsmaeelAkram/ltp/src/request"
+	"github.com/IsmaeelAkram/ltp/src/util"
 )
 
 func handleConn(conn net.Conn, id int) {
@@ -13,7 +14,8 @@ func handleConn(conn net.Conn, id int) {
 		if err != nil {
 			break
 		}
-		conn.Write([]byte(fmt.Sprintf("%d\n", req.Method)))
+		response := util.GetTime(req.Method)
+		conn.Write([]byte(response))
 	}
 	defer fmt.Printf("Connection #%d closed\n", id)
 	conn.Close()

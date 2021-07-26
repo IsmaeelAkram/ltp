@@ -3,14 +3,14 @@ package request
 type MethodType int
 
 const (
-	REQUEST_INVALID     = 0
-	REQUEST_DATETIME    = 1
-	REQUEST_DATE        = 2
-	REQUEST_TIME        = 3
-	REQUEST_HOUR        = 4
-	REQUEST_MINUTE      = 5
-	REQUEST_SECOND      = 6
-	REQUEST_MILLISECOND = 7
+	REQUEST_INVALID    = 0
+	REQUEST_DATETIME   = 1
+	REQUEST_DATE       = 2
+	REQUEST_TIME       = 3
+	REQUEST_HOUR       = 4
+	REQUEST_MINUTE     = 5
+	REQUEST_SECOND     = 6
+	REQUEST_NANOSECOND = 7
 )
 
 func GetMethodType(x string) MethodType {
@@ -27,8 +27,8 @@ func GetMethodType(x string) MethodType {
 		return REQUEST_MINUTE
 	case "SECOND":
 		return REQUEST_SECOND
-	case "MILLISECOND":
-		return REQUEST_MILLISECOND
+	case "NANOSECOND":
+		return REQUEST_NANOSECOND
 	default:
 		return REQUEST_INVALID
 	}

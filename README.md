@@ -13,7 +13,7 @@ The master server has the **correct **time and distributes it on request. A slav
 * HOUR
 * MINUTE
 * SECOND
-* MILLISECOND
+* NANOSECOND
 
 #### Responses
 * **DATETIME** responds with the date and time. Response:
@@ -41,7 +41,7 @@ The master server has the **correct **time and distributes it on request. A slav
     33
     ```
 
-* **MILLISECOND** responds with the time. Response:
+* **NANOSECOND** responds with the time. Response:
     ```
     572
     ```
