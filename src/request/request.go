@@ -24,7 +24,7 @@ func GetRequest(conn net.Conn, id int) (Request, error) {
 	}
 	bRequest = bytes.Trim(bRequest, "\x00") // Remove null bytes
 	sRequest := strings.ReplaceAll(string(bRequest), "\n", "")
-	method := GetMethodType(sRequest)
+	method := GetMethodType(strings.ToUpper(sRequest))
 
 	return Request{id, method, conn, bRequest, sRequest}, nil
 }

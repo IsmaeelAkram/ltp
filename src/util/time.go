@@ -16,6 +16,12 @@ func GetTime(method request.MethodType) string {
 		return fmt.Sprintf("%d-%d-%d", now.Month(), now.Day(), now.Year())
 	case request.REQUEST_TIME:
 		return fmt.Sprintf("%d:%d:%d:%d", now.Hour(), now.Minute(), now.Second(), now.Nanosecond())
+	case request.REQUEST_MONTH:
+		return fmt.Sprintf("%d", now.Month())
+	case request.REQUEST_DAY:
+		return fmt.Sprintf("%d", now.Day())
+	case request.REQUEST_YEAR:
+		return fmt.Sprintf("%d", now.Year())
 	case request.REQUEST_HOUR:
 		return fmt.Sprintf("%d", now.Hour())
 	case request.REQUEST_MINUTE:

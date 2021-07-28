@@ -7,10 +7,13 @@ const (
 	REQUEST_DATETIME   = 1
 	REQUEST_DATE       = 2
 	REQUEST_TIME       = 3
-	REQUEST_HOUR       = 4
-	REQUEST_MINUTE     = 5
-	REQUEST_SECOND     = 6
-	REQUEST_NANOSECOND = 7
+	REQUEST_MONTH      = 4
+	REQUEST_DAY        = 5
+	REQUEST_YEAR       = 6
+	REQUEST_HOUR       = 7
+	REQUEST_MINUTE     = 8
+	REQUEST_SECOND     = 9
+	REQUEST_NANOSECOND = 10
 )
 
 func GetMethodType(x string) MethodType {
@@ -21,6 +24,12 @@ func GetMethodType(x string) MethodType {
 		return REQUEST_DATE
 	case "TIME":
 		return REQUEST_TIME
+	case "MONTH":
+		return REQUEST_MONTH
+	case "DAY":
+		return REQUEST_DAY
+	case "YEAR":
+		return REQUEST_YEAR
 	case "HOUR":
 		return REQUEST_HOUR
 	case "MINUTE":
