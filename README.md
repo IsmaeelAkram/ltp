@@ -4,6 +4,8 @@ Network protocol to request and synchronize time across machines.
 ### Explanation
 The master server has the **correct** time and distributes it on request. A slave server can ask the master server for the correct time and will synchronize accordingly. Max request size is **12 bytes**.
 
+![ltp diagram](https://user-images.githubusercontent.com/19865145/127964125-2172283c-d277-4c7b-b2db-052605e60f5e.jpeg)
+
 ### Types of requests
 - DATETIME
 - DATE
